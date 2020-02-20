@@ -856,6 +856,7 @@ struct f2fs_inode_info {
         struct list_head xattr_dirty_list;      /* list for xattr changed inodes */
 	pgoff_t ra_offset;		/* ongoing readahead offset */
 	struct inode *cow_inode;	/* copy-on-write inode for atomic write */
+	struct list_head xattr_dirty_list;	/* list for xattr changed inodes */
 
 	/* avoid racing between foreground op and gc */
 	struct f2fs_rwsem i_gc_rwsem[2];
